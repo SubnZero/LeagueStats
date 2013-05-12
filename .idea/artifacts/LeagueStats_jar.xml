@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="LeagueStats:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LeagueStats_jar</output-path>
+    <root id="archive" name="LeagueStats.jar">
+      <element id="module-output" name="LeagueStats" />
+    </root>
+  </artifact>
+</component>

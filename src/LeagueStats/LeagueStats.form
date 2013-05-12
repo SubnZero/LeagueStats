@@ -1,0 +1,1594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="LeagueStats.LeagueStats">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="543" height="360"/>
+    </constraints>
+    <properties/>
+    <border type="none">
+      <font/>
+      <title-color color="-16777216"/>
+    </border>
+    <children>
+      <tabbedpane id="b1ff6">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="15ff0" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="1 Champ"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="c6d5e" class="javax.swing.JComboBox" binding="champBox" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value="The Champion you want to counter."/>
+                </properties>
+              </component>
+              <scrollpane id="f2127">
+                <constraints>
+                  <grid row="0" column="1" row-span="5" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="c1b6e" class="javax.swing.JList" binding="counterList" custom-create="true">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+              <grid id="77001" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none" title="Additional Info"/>
+                <children>
+                  <component id="74836" class="javax.swing.JButton" binding="mobafireButton" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Mobafire"/>
+                    </properties>
+                  </component>
+                  <vspacer id="550e6">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <component id="37df2" class="javax.swing.JRadioButton" binding="goodWithRadioButton" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="good with"/>
+                </properties>
+              </component>
+              <component id="4e599" class="javax.swing.JRadioButton" binding="goodAgainstRadioButton" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="good against"/>
+                </properties>
+              </component>
+              <component id="73be7" class="javax.swing.JRadioButton" binding="badAgainstRadioButton" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="bad against"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="420ae" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Team"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="50a38" class="javax.swing.JComboBox" binding="Team1">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="3782" class="javax.swing.JComboBox" binding="Team5">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="82828" class="javax.swing.JComboBox" binding="Enemy1">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="2df74" class="javax.swing.JComboBox" binding="Enemy5">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="eb65f" class="javax.swing.JComboBox" binding="Team2">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="7e85a" class="javax.swing.JComboBox" binding="Enemy2">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="6d767" class="javax.swing.JComboBox" binding="Team3">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="6fb14" class="javax.swing.JComboBox" binding="Enemy3">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="b01ff" class="javax.swing.JComboBox" binding="Team4">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="ebc85" class="javax.swing.JComboBox" binding="Enemy4">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="---"/>
+                    <item value="Ahri"/>
+                    <item value="Akali"/>
+                    <item value="Alistar"/>
+                    <item value="Amumu"/>
+                    <item value="Anivia"/>
+                    <item value="Annie"/>
+                    <item value="Ashe"/>
+                    <item value="Blitzcrank"/>
+                    <item value="Brand"/>
+                    <item value="Caitlyn"/>
+                    <item value="Cassiopeia"/>
+                    <item value="Cho'Gath"/>
+                    <item value="Corki"/>
+                    <item value="Darius"/>
+                    <item value="Diana"/>
+                    <item value="Dr. Mundo"/>
+                    <item value="Draven"/>
+                    <item value="Elise"/>
+                    <item value="Evelynn"/>
+                    <item value="Ezreal"/>
+                    <item value="Fiddlesticks"/>
+                    <item value="Fiora"/>
+                    <item value="Fizz"/>
+                    <item value="Galio"/>
+                    <item value="Gangplank"/>
+                    <item value="Garen"/>
+                    <item value="Gragas"/>
+                    <item value="Hecarim"/>
+                    <item value="Heimerdinger"/>
+                    <item value="Irelia"/>
+                    <item value="Janna"/>
+                    <item value="Jarvan IV"/>
+                    <item value="Jax"/>
+                    <item value="Jayce"/>
+                    <item value="Karma"/>
+                    <item value="Karthus"/>
+                    <item value="Kassadin"/>
+                    <item value="Katarina"/>
+                    <item value="Kayle"/>
+                    <item value="Kennen"/>
+                    <item value="Kha'Zix"/>
+                    <item value="Kog'Maw"/>
+                    <item value="LeBlanc"/>
+                    <item value="Lee Sin"/>
+                    <item value="Leona"/>
+                    <item value="Lissandra"/>
+                    <item value="Lulu"/>
+                    <item value="Lux"/>
+                    <item value="Malphite"/>
+                    <item value="Malzahar"/>
+                    <item value="Maokai"/>
+                    <item value="Master Yi"/>
+                    <item value="Miss Fortune"/>
+                    <item value="Mordekaiser"/>
+                    <item value="Morgana"/>
+                    <item value="Nami"/>
+                    <item value="Nasus"/>
+                    <item value="Nautilus"/>
+                    <item value="Nidalee"/>
+                    <item value="Nocturne"/>
+                    <item value="Nunu"/>
+                    <item value="Olaf"/>
+                    <item value="Orianna"/>
+                    <item value="Pantheon"/>
+                    <item value="Poppy"/>
+                    <item value="Quinn"/>
+                    <item value="Rammus"/>
+                    <item value="Renekton"/>
+                    <item value="Rengar"/>
+                    <item value="Riven"/>
+                    <item value="Rumble"/>
+                    <item value="Ryze"/>
+                    <item value="Sejuani"/>
+                    <item value="Shaco"/>
+                    <item value="Shen"/>
+                    <item value="Shyvana"/>
+                    <item value="Singed"/>
+                    <item value="Sion"/>
+                    <item value="Sivir"/>
+                    <item value="Skarner"/>
+                    <item value="Sona"/>
+                    <item value="Soraka"/>
+                    <item value="Swain"/>
+                    <item value="Syndra"/>
+                    <item value="Talon"/>
+                    <item value="Taric"/>
+                    <item value="Teemo"/>
+                    <item value="Thresh"/>
+                    <item value="Tristana"/>
+                    <item value="Trundle"/>
+                    <item value="Tryndamere"/>
+                    <item value="Twisted Fate"/>
+                    <item value="Twitch"/>
+                    <item value="Udyr"/>
+                    <item value="Urgot"/>
+                    <item value="Varus"/>
+                    <item value="Vayne"/>
+                    <item value="Veigar"/>
+                    <item value="Vi"/>
+                    <item value="Viktor"/>
+                    <item value="Vladimir"/>
+                    <item value="Volibear"/>
+                    <item value="Warwick"/>
+                    <item value="Wukong"/>
+                    <item value="Xerath"/>
+                    <item value="Xin Zhao"/>
+                    <item value="Yorick"/>
+                    <item value="Zac"/>
+                    <item value="Zed"/>
+                    <item value="Ziggs"/>
+                    <item value="Zilean"/>
+                    <item value="Zyra"/>
+                  </model>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="123ad" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Counter:"/>
+                </properties>
+              </component>
+              <scrollpane id="b26a">
+                <constraints>
+                  <grid row="1" column="1" row-span="4" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="ad5bb" class="javax.swing.JList" binding="counterListTeam">
+                    <constraints/>
+                    <properties>
+                      <model>
+                        <item value="coming soon"/>
+                      </model>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+          <grid id="d4dd0" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Summoner"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="50f0a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="115" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value="Enter summoner name:"/>
+                </properties>
+              </component>
+              <vspacer id="ff091">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="a8b18" class="javax.swing.JTextField" binding="summonerField" default-binding="true">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="211" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="749b4" class="javax.swing.JButton" binding="searchButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="69" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value="Search"/>
+                </properties>
+              </component>
+              <component id="4dbc0" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Coming soon"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="d60be" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="About"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="e611e" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="League Statistics V1"/>
+                </properties>
+              </component>
+              <component id="99155" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Coded by Jason 'SubnZero' Schühlein"/>
+                </properties>
+              </component>
+              <component id="ae3e2" class="javax.swing.JButton" binding="updateLibButton" default-binding="true">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Update counter libary"/>
+                </properties>
+              </component>
+              <vspacer id="cee20">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="c98e5" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="This may take a few moments. (2-5min)"/>
+                </properties>
+              </component>
+              <vspacer id="dfc98">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="1a424" class="javax.swing.JProgressBar" binding="updateLibBar" custom-create="true">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+  <inspectionSuppressions>
+    <suppress inspection="NoLabelFor"/>
+  </inspectionSuppressions>
+</form>
