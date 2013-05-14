@@ -8,28 +8,59 @@ package LeagueStats;
  * To change this template use File | Settings | File Templates.
  */
 public class Champion {
-    String name;
-    String title;
-    byte idn;       // ID alphabetical sorted
-    byte idt;       // ID time sorted
-    byte[] badagainst = new byte[10];
-    byte[] goodagainst = new byte[10];
-    byte[] goodwith = new byte[10];
+    private final String name;
+    private final String title;
+    private byte idn;       // ID alphabetical sorted
+    private byte[] badagainst;
+    private byte[] goodagainst;
+    private byte[] goodwith;
 
-    public Champion(String name, String title, byte idn, byte idt, byte[] badagainst, byte[] goodagainst, byte[] goodwith) {
+    public Champion(String name, String title) {
         this.name = name;
         this.title = title;
-        this.idn = idn;
-        this.idt = idt;
+
+        badagainst = new byte[10];
+        goodagainst = new byte[10];
+        goodwith = new byte[10];
+    }
+
+    public byte[] getBadAgainst() {
+        return badagainst;
+    }
+
+    public void setBadAgainst(byte[] badagainst) {
         this.badagainst = badagainst;
+    }
+
+    public byte[] getGoodAgainst() {
+        return goodagainst;
+    }
+
+    public void setGoodAgainst(byte[] goodagainst) {
         this.goodagainst = goodagainst;
+    }
+
+    public byte[] getGoodWith() {
+        return goodwith;
+    }
+
+    public void setGoodWith(byte[] goodwith) {
         this.goodwith = goodwith;
     }
 
-    public Champion(String name, String title, byte idn, byte idt) {
-        this.name = name;
-        this.title = title;
+    public String getName() {
+        return name;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public byte getIdn() {
+        return idn;
+    }
+
+    public void setIdn(byte idn) {
         this.idn = idn;
-        this.idt = idt;
     }
 }

@@ -1,6 +1,9 @@
 package WebsiteParser;
 
+import LeagueStats.Champion;
 import LeagueStats.LeagueStats;
+
+import static LeagueStats.LeagueStats.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,16 +13,15 @@ import LeagueStats.LeagueStats;
  * To change this template use File | Settings | File Templates.
  */
 public class lolcounterParser {
-    private Parser p = null;
-
+    private final Parser p;
 
     public lolcounterParser() {
         p = new Parser("http://www.lolcounter.com");
     }
 
-    public int[] getCounters(int champ) {
-        int[] counters = new int[10];
-        String urlExt = "/champ/" + LeagueStats.champions.get(champ).toLowerCase().replaceAll("['. ]", "");
+    public byte[] getBadAgainst(Champion c) {
+        byte[] badAgainst = new byte[10];
+        String urlExt = "/champ/" + c.getName().toLowerCase().replaceAll("['. ]", "");
         p.setUrlExt(urlExt);
         p.init();
         String source = p.getSource();
@@ -35,10 +37,9 @@ public class lolcounterParser {
         for (int i = 0; i < 10; i++) {
             iChampStart = countersource.indexOf("<h4>", iChampStart) + "<h4>         ".length();
             iChampEnd = countersource.indexOf('<', iChampStart) - "        ".length();
-            counters[i] = LeagueStats.champions.indexOf(countersource.substring(iChampStart, iChampEnd));
-            System.out.println(countersource.substring(iChampStart, iChampEnd));
+            badAgainst[i] = (byte) champions.getIndexByName(countersource.substring(iChampStart, iChampEnd));
         }
 
-        return counters;
+        return badAgainst;
     }
 }

@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="LeagueStats.LeagueStats">
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="543" height="360"/>
+      <xy x="20" y="20" width="661" height="476"/>
     </constraints>
     <properties/>
     <border type="none">
@@ -159,7 +159,7 @@
                   </component>
                 </children>
               </scrollpane>
-              <grid id="77001" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="77001" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -169,7 +169,7 @@
                 <children>
                   <component id="74836" class="javax.swing.JButton" binding="mobafireButton" default-binding="true">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Mobafire"/>
@@ -177,9 +177,17 @@
                   </component>
                   <vspacer id="550e6">
                     <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                     </constraints>
                   </vspacer>
+                  <component id="a2124" class="javax.swing.JLabel" binding="selectedChampionIconLabel" custom-create="true">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
               <component id="37df2" class="javax.swing.JRadioButton" binding="goodWithRadioButton" custom-create="true" default-binding="true">
@@ -1473,7 +1481,7 @@
               </scrollpane>
             </children>
           </grid>
-          <grid id="d4dd0" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="d4dd0" layout-manager="GridLayoutManager" row-count="2" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="Summoner"/>
@@ -1483,7 +1491,7 @@
             <children>
               <component id="50f0a" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                     <preferred-size width="115" height="27"/>
                   </grid>
                 </constraints>
@@ -1491,14 +1499,9 @@
                   <text value="Enter summoner name:"/>
                 </properties>
               </component>
-              <vspacer id="ff091">
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                </constraints>
-              </vspacer>
               <component id="a8b18" class="javax.swing.JTextField" binding="summonerField" default-binding="true">
                 <constraints>
-                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="211" height="27"/>
                   </grid>
                 </constraints>
@@ -1508,7 +1511,7 @@
               </component>
               <component id="749b4" class="javax.swing.JButton" binding="searchButton" default-binding="true">
                 <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="69" height="27"/>
                   </grid>
                 </constraints>
@@ -1516,17 +1519,273 @@
                   <text value="Search"/>
                 </properties>
               </component>
-              <component id="4dbc0" class="javax.swing.JLabel">
+              <component id="bba16" class="javax.swing.JComboBox" binding="summonerServerBox">
                 <constraints>
-                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Coming soon"/>
+                  <model>
+                    <item value="NA"/>
+                    <item value="EUW"/>
+                    <item value="EUNA"/>
+                    <item value="BR"/>
+                    <item value="TR"/>
+                    <item value="RU"/>
+                  </model>
                 </properties>
               </component>
+              <grid id="8985d" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none" title=""/>
+                <children>
+                  <tabbedpane id="68d38" binding="tabbedPane1" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="200" height="200"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <grid id="c2797" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <tabbedpane title="General"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <grid id="832e7" layout-manager="GridLayoutManager" row-count="9" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="1" column="0" row-span="3" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none" title="Personal Statistics"/>
+                            <children>
+                              <component id="f69aa" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="AP Mid:"/>
+                                </properties>
+                              </component>
+                              <component id="b5aaf" class="javax.swing.JLabel" binding="apMidStatsLabel">
+                                <constraints>
+                                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <component id="4979f" class="javax.swing.JLabel" binding="adCarryStatsLabel">
+                                <constraints>
+                                  <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <component id="4fdec" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="AD Carry:"/>
+                                </properties>
+                              </component>
+                              <component id="4bd7e" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Support:"/>
+                                </properties>
+                              </component>
+                              <component id="1d254" class="javax.swing.JLabel" binding="supportStatsLabel">
+                                <constraints>
+                                  <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <component id="55772" class="javax.swing.JLabel" binding="jungleStatsLabel">
+                                <constraints>
+                                  <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <component id="7b7ca" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Jungle:"/>
+                                </properties>
+                              </component>
+                              <component id="baeab" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Top:"/>
+                                </properties>
+                              </component>
+                              <component id="b5d8c" class="javax.swing.JLabel" binding="topStatsLabel">
+                                <constraints>
+                                  <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <vspacer id="d1cbd">
+                                <constraints>
+                                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                              </vspacer>
+                              <component id="b0a0a" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Wins:"/>
+                                </properties>
+                              </component>
+                              <component id="db918" class="javax.swing.JLabel" binding="normalWinsLabel">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <component id="babcc" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Loses:"/>
+                                </properties>
+                              </component>
+                              <component id="8d04e" class="javax.swing.JLabel" binding="normalLossesLabel">
+                                <constraints>
+                                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <component id="f5742" class="javax.swing.JSeparator">
+                                <constraints>
+                                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties/>
+                              </component>
+                            </children>
+                          </grid>
+                          <component id="7ddb0" class="javax.swing.JLabel" binding="summonerIconLabel" custom-create="true">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                                <preferred-size width="60" height="60"/>
+                              </grid>
+                            </constraints>
+                            <properties>
+                              <horizontalAlignment value="0"/>
+                              <horizontalTextPosition value="4"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="286af" class="javax.swing.JLabel" binding="lolkingScoreLabel">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <horizontalAlignment value="0"/>
+                              <horizontalTextPosition value="0"/>
+                              <text value="lolkingScore coming soon.."/>
+                            </properties>
+                          </component>
+                          <grid id="adf28" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none" title="Solo Queue:"/>
+                            <children/>
+                          </grid>
+                          <grid id="12026" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none" title="5v5 Team:"/>
+                            <children/>
+                          </grid>
+                          <grid id="4ec7f" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none" title="3v3 Team:"/>
+                            <children/>
+                          </grid>
+                        </children>
+                      </grid>
+                      <grid id="9b842" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <tabbedpane title="Last Matches"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="1cf55" class="javax.swing.JTable" binding="lastMatches" custom-create="true">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="50"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="e9bf6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <tabbedpane title="Masteries"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                      <grid id="1b95a" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <tabbedpane title="Runes"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                    </children>
+                  </tabbedpane>
+                </children>
+              </grid>
             </children>
           </grid>
-          <grid id="d60be" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="d60be" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="About"/>
@@ -1536,7 +1795,7 @@
             <children>
               <component id="e611e" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <text value="League Statistics V1"/>
@@ -1544,7 +1803,7 @@
               </component>
               <component id="99155" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <text value="Coded by Jason 'SubnZero' Schühlein"/>
@@ -1552,35 +1811,38 @@
               </component>
               <component id="ae3e2" class="javax.swing.JButton" binding="updateLibButton" default-binding="true">
                 <constraints>
-                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <text value="Update counter libary"/>
                 </properties>
               </component>
-              <vspacer id="cee20">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                </constraints>
-              </vspacer>
               <component id="c98e5" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <text value="This may take a few moments. (2-5min)"/>
                 </properties>
               </component>
-              <vspacer id="dfc98">
+              <component id="1a424" class="javax.swing.JProgressBar" binding="progressBar" custom-create="true">
                 <constraints>
-                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                </constraints>
-              </vspacer>
-              <component id="1a424" class="javax.swing.JProgressBar" binding="updateLibBar" custom-create="true">
-                <constraints>
-                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties/>
+              </component>
+              <component id="6abcb" class="javax.swing.JTextArea" binding="changelistSoFarSummonerTextArea" default-binding="true">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="100" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <lineWrap value="false"/>
+                  <text value="Changelist (so far):&#10;+ Summoner - General Tab (almost) fully functional&#10;o 1 Champ - Counter Pick fully functional&#10;  &quot;Good Against&quot; and &quot;Good With&quot; coming soon&#10;- Team - Counter Pick not started (not enough information)"/>
+                  <wrapStyleWord value="false"/>
+                </properties>
               </component>
             </children>
           </grid>
@@ -1588,6 +1850,13 @@
       </tabbedpane>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="radioButtonGroup" bound="true">
+      <member id="73be7"/>
+      <member id="4e599"/>
+      <member id="37df2"/>
+    </group>
+  </buttonGroups>
   <inspectionSuppressions>
     <suppress inspection="NoLabelFor"/>
   </inspectionSuppressions>

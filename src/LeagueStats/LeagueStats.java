@@ -1,18 +1,15 @@
 package LeagueStats;
 
-import WebsiteParser.lolcounterParser;
+import WebsiteParser.lolkingParser;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,6 +19,9 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class LeagueStats {
+    public static final Champions champions = new Champions();
+    private final lolkingParser kParser = new lolkingParser();
+    public JProgressBar progressBar;
     private JPanel panel1;
     private JComboBox champBox;
     private JButton updateLibButton;
@@ -43,154 +43,63 @@ public class LeagueStats {
     private JRadioButton goodWithRadioButton;
     private JRadioButton goodAgainstRadioButton;
     private JRadioButton badAgainstRadioButton;
-    private JProgressBar updateLibBar;
     private JButton mobafireButton;
-    private String selectedChampion = "";
-    private String summoner = "";
-    private static List<int[]> cList = new ArrayList<int[]>();
-    private static lolcounterParser lolcP;
-    private static final int nChampions = 112;
-    public static final List<String> champions = new ArrayList<String>(Arrays.asList(
-            "Ahri",
-            "Akali",
-            "Alistar",
-            "Amumu",
-            "Anivia",
-            "Annie",
-            "Ashe",
-            "Blitzcrank",
-            "Brand",
-            "Caitlyn",
-            "Cassiopeia",
-            "Cho'Gath",
-            "Corki",
-            "Darius",
-            "Diana",
-            "Dr. Mundo",
-            "Draven",
-            "Elise",
-            "Evelynn",
-            "Ezreal",
-            "Fiddlesticks",
-            "Fiora",
-            "Fizz",
-            "Galio",
-            "Gangplank",
-            "Garen",
-            "Gragas",
-            "Hecarim",
-            "Heimerdinger",
-            "Irelia",
-            "Janna",
-            "Jarvan IV",
-            "Jax",
-            "Jayce",
-            "Karma",
-            "Karthus",
-            "Kassadin",
-            "Katarina",
-            "Kayle",
-            "Kennen",
-            "Kha'Zix",
-            "Kog'Maw",
-            "LeBlanc",
-            "Lee Sin",
-            "Leona",
-            "Lissandra",
-            "Lulu",
-            "Lux",
-            "Malphite",
-            "Malzahar",
-            "Maokai",
-            "Master Yi",
-            "Miss Fortune",
-            "Mordekaiser",
-            "Morgana",
-            "Nami",
-            "Nasus",
-            "Nautilus",
-            "Nidalee",
-            "Nocturne",
-            "Nunu",
-            "Olaf",
-            "Orianna",
-            "Pantheon",
-            "Poppy",
-            "Quinn",
-            "Rammus",
-            "Renekton",
-            "Rengar",
-            "Riven",
-            "Rumble",
-            "Ryze",
-            "Sejuani",
-            "Shaco",
-            "Shen",
-            "Shyvana",
-            "Singed",
-            "Sion",
-            "Sivir",
-            "Skarner",
-            "Sona",
-            "Soraka",
-            "Swain",
-            "Syndra",
-            "Talon",
-            "Taric",
-            "Teemo",
-            "Thresh",
-            "Tristana",
-            "Trundle",
-            "Tryndamere",
-            "Twisted Fate",
-            "Twitch",
-            "Udyr",
-            "Urgot",
-            "Varus",
-            "Vayne",
-            "Veigar",
-            "Vi",
-            "Viktor",
-            "Vladimir",
-            "Volibear",
-            "Warwick",
-            "Wukong",
-            "Xerath",
-            "Xin Zhao",
-            "Yorick",
-            "Zac",
-            "Zed",
-            "Ziggs",
-            "Zilean",
-            "Zyra")
-    );
-
+    private JComboBox summonerServerBox;
+    private JTabbedPane tabbedPane1;
+    private JLabel apMidStatsLabel;
+    private JLabel adCarryStatsLabel;
+    private JLabel supportStatsLabel;
+    private JLabel jungleStatsLabel;
+    private JLabel topStatsLabel;
+    private JLabel summonerIconLabel;
+    private JLabel selectedChampionIconLabel;
+    private JTable lastMatches;
+    private JLabel normalWinsLabel;
+    private JLabel normalLossesLabel;
+    private JLabel lolkingScoreLabel;
+    private JTextArea changelistSoFarSummonerTextArea;
+    private JLabel levelLabel;
+    private ButtonGroup radioButtonGroup;
+    private String selectedChampion;
+    private String summoner;
 
     public LeagueStats() {
-        lolcP = new lolcounterParser();
 
         champBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 selectedChampion = e.getItem().toString();
-                if (selectedChampion != "---") {
+                counterListModel.clear();
+                if (!champions.allUpToDate() && champions.getPUpdate() == 0) {
+                    counterListModel.addElement("Downloading counter lib...");
+                    mobafireButton.setEnabled(false);
+                    updateLibButton.setEnabled(false);
+                    progressBar.setIndeterminate(true);
+                    champions.updateAll();
+                } else if (champions.allUpToDate() && selectedChampion.equals("---")) {
                     counterListModel.clear();
-                    int i = champions.indexOf(selectedChampion);
-                    if (cList == null || cList.size() == 0) {
-                        counterListModel.addElement("Downloading counter lib...");
-                        update();
-                    } else {
-                        int[] integers = cList.get(i);
-                        for (int champID : integers) {
-                            if (champID != -1) {
-                                counterListModel.addElement(champions.get(champID));
-                            } else {
-                                counterListModel.addElement("Parser Error (champID = -1)");
-                            }
+                    counterListModel.addElement("Download complete!");
+                    mobafireButton.setEnabled(false);
+                    updateLibButton.setEnabled(true);
+                    progressBar.setIndeterminate(false);
 
+                } else if (!selectedChampion.equals("---")) {
+                    counterListModel.clear();
+                    progressBar.setIndeterminate(false);
+                    mobafireButton.setEnabled(true);
+
+                    int indexByName = champions.getIndexByName(selectedChampion);
+                    byte[] bytes = champions.get(indexByName).getBadAgainst();
+                    for (byte b : bytes) {
+                        if (b != -1) {
+                            String name = champions.get(b).getName();
+                            if (!counterListModel.contains(name)) {
+                                counterListModel.addElement(name);
+                            }
+                        } else {
+                            counterListModel.addElement("Parser Error (champID = -1)");
                         }
                     }
-
                 }
             }
         });
@@ -199,90 +108,95 @@ public class LeagueStats {
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (e.getActionCommand() == "Search") {
+                if (e.getActionCommand().equals("Search")) {
                     summoner = summonerField.getText();
+                    System.out.println(summonerServerBox.getSelectedIndex());
+                    if (kParser.isValid(summoner, summonerServerBox.getSelectedIndex())) {
+                        kParser.parse();
+                        summonerIconLabel.setIcon(kParser.getSummonerIcon());
+                        byte[] wlTemp = kParser.getWlApm();
+                        float percentage;
+                        if (wlTemp[0] + wlTemp[1] == 0)
+                            percentage = 0;
+                        else
+                            percentage = 100 * wlTemp[0] / (wlTemp[0] + wlTemp[1]);
+                        apMidStatsLabel.setText(wlTemp[0] + " Wins | " + (wlTemp[0] + wlTemp[1]) + " Losses - " + percentage + "%");
+
+                        wlTemp = kParser.getWlAdc();
+                        if (wlTemp[0] + wlTemp[1] == 0)
+                            percentage = 0;
+                        else
+                            percentage = 100 * wlTemp[0] / (wlTemp[0] + wlTemp[1]);
+                        adCarryStatsLabel.setText(wlTemp[0] + " Wins | " + (wlTemp[0] + wlTemp[1]) + " Losses - " + percentage + "%");
+
+                        wlTemp = kParser.getWlSupport();
+                        if (wlTemp[0] + wlTemp[1] == 0) {
+                            percentage = 0;
+                        } else {
+                            percentage = 100 * wlTemp[0] / (wlTemp[0] + wlTemp[1]);
+                        }
+                        supportStatsLabel.setText(wlTemp[0] + " Wins | " + (wlTemp[0] + wlTemp[1]) + " Losses - " + percentage + "%");
+
+                        wlTemp = kParser.getWlJungle();
+                        if (wlTemp[0] + wlTemp[1] == 0)
+                            percentage = 0;
+                        else
+                            percentage = 100 * wlTemp[0] / (wlTemp[0] + wlTemp[1]);
+                        jungleStatsLabel.setText(wlTemp[0] + " Wins | " + (wlTemp[0] + wlTemp[1]) + " Losses - " + percentage + "%");
+
+                        wlTemp = kParser.getWlTop();
+                        if (wlTemp[0] + wlTemp[1] == 0)
+                            percentage = 0;
+                        else
+                            percentage = 100 * wlTemp[0] / (wlTemp[0] + wlTemp[1]);
+                        topStatsLabel.setText(wlTemp[0] + " Wins | " + (wlTemp[0] + wlTemp[1]) + " Losses - " + percentage + "%");
+
+                        summonerIconLabel.setText(kParser.getName() + " - Level: " + kParser.getLevel());
+
+                        normalWinsLabel.setText("" + kParser.getWlNormal()[0]);
+                        normalLossesLabel.setText("" + kParser.getWlNormal()[1]);
+                    }
                 }
             }
         });
         updateLibButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (e.getActionCommand() == "Update counter libary") {
-                    update();
+                if (e.getActionCommand().equals("Update counter libary")) {
+                    counterListModel.clear();
+                    counterListModel.addElement("Downloading counter lib...");
+                    mobafireButton.setEnabled(false);
+                    updateLibButton.setEnabled(false);
+                    progressBar.setIndeterminate(true);
+                    champions.updateAll();
                 }
             }
         });
         mobafireButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (e.getActionCommand() == "Mobafire") {
+                if (e.getActionCommand().equals("Mobafire") && champions.allUpToDate()) {
                     try {
-                        openUrl("" + counterList.getSelectedIndex() + "");
+                        openUrl("http://www.mobafire.com/league-of-legends/" + counterListModel.get(counterList.getSelectedIndex()).toLowerCase().replaceAll("['. ]", "") + "-guide");
                     } catch (IOException e1) {
-                        e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                        e1.printStackTrace();
                     } catch (URISyntaxException e1) {
-                        e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                        e1.printStackTrace();
                     }
                 }
             }
         });
     }
 
-    private void update() {
-        new Thread() {
-            public void run() {
-                updateLibBar.setString("parsing lolcounter...");
-                for (int i = 0; i < nChampions; i++) {
-                    int[] counters = lolcP.getCounters(i);
-                    if (counters == null) return;
-                    cList.add(i, counters);
-                    System.out.println(champions.get(i));
-                    updateLibBar.setValue((i + 1) * 100 / nChampions);
-                }
-                updateLibBar.setString("saving to file...");
-                updateLibBar.setIndeterminate(true);
-                listToFile(cList);
-                updateLibBar.setString("DONE");
-                updateLibBar.setIndeterminate(false);
-            }
-        }.start();
-
-
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("LeagueStats");
+        frame.setContentPane(new LeagueStats().panel1);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
 
-    private void listToFile(List<int[]> list) {
-        try {
-            FileWriter writer = new FileWriter("counters.txt");
-            for (int[] IDs : list) {
-                for (int ID : IDs) {
-                    writer.write(ID + " ");
-                }
-                writer.write("\n");
-            }
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private static List<int[]> fileToList() {
-        List<int[]> list = new ArrayList<int[]>();
-
-        try {
-            Scanner scanner = new Scanner(new File("counters.txt"));
-            for (int i = 0; i < nChampions; i++) {
-                int[] counterIDs = new int[]{scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt()};
-                list.add(i, counterIDs);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchElementException e) {
-            e.printStackTrace();
-        }
-        return list;
-    }
-
-    public void openUrl(String url) throws IOException, URISyntaxException {
+    void openUrl(String url) throws IOException, URISyntaxException {
         if (java.awt.Desktop.isDesktopSupported()) {
             java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
 
@@ -293,26 +207,28 @@ public class LeagueStats {
         }
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("LeagueStats");
-        frame.setContentPane(new LeagueStats().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-
-        cList = fileToList();
-    }
-
     private void createUIComponents() {
         counterListModel = new DefaultListModel<String>();
         counterList = new JList<String>(counterListModel);
         badAgainstRadioButton = new JRadioButton("good against", true);
         goodAgainstRadioButton = new JRadioButton("good against", false);
         goodWithRadioButton = new JRadioButton("good against", false);
-        ButtonGroup rButtonGroup = new ButtonGroup();
-        rButtonGroup.add(badAgainstRadioButton);
-        rButtonGroup.add(goodAgainstRadioButton);
-        rButtonGroup.add(goodWithRadioButton);
-        updateLibBar = new JProgressBar();
+        progressBar = new JProgressBar();
+        levelLabel = new JLabel();
+        selectedChampionIconLabel = new JLabel();
+        summonerIconLabel = new JLabel();
+
+
+        DefaultTableModel lastMatchesModel = new DefaultTableModel();
+        lastMatchesModel.addColumn("Champion");
+        lastMatchesModel.addColumn("Length");
+        lastMatchesModel.addColumn("Stats");
+        lastMatchesModel.addColumn("Gold");
+        lastMatchesModel.addColumn("Minions");
+        lastMatchesModel.addColumn("Spells");
+        lastMatchesModel.addColumn("Items");
+        lastMatches = new JTable(lastMatchesModel);
+
+
     }
 }
