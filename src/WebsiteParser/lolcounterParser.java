@@ -35,7 +35,7 @@ public class lolcounterParser {
         String countersource = source.substring(istart, iend);
 
         for (int i = 0; i < 10; i++) {
-            iChampStart = countersource.indexOf("<h4>", iChampStart) + "<h4>         ".length();
+            iChampStart = countersource.indexOf("<h4>", iChampStart) + "<h4>        ".length();
             iChampEnd = countersource.indexOf('<', iChampStart) - "        ".length();
             badAgainst[i] = (byte) champions.getIndexByName(countersource.substring(iChampStart, iChampEnd));
         }
