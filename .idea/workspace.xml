@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="276bc3d5-5c69-44d6-81b7-163289be2a71" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WebsiteParser/lolcounterParser.java" afterPath="$PROJECT_DIR$/src/WebsiteParser/lolcounterParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LeagueStats.iws" />
@@ -317,7 +316,7 @@
     <file path="$APPLICATION_HOME_DIR$/plugins/Seam/lib/seam-support.jar!/resources/schemas/framework-2.1.xsd" changelist="276bc3d5-5c69-44d6-81b7-163289be2a71" time="1368348771063" ignored="false" />
     <file path="/Champion.java" changelist="276bc3d5-5c69-44d6-81b7-163289be2a71" time="1368450106820" ignored="false" />
     <file path="/Champions.java" changelist="276bc3d5-5c69-44d6-81b7-163289be2a71" time="1368545115399" ignored="false" />
-    <file path="/Dummy.txt" changelist="276bc3d5-5c69-44d6-81b7-163289be2a71" time="1368630396509" ignored="false" />
+    <file path="/Dummy.txt" changelist="276bc3d5-5c69-44d6-81b7-163289be2a71" time="1368631830827" ignored="false" />
     <file path="/mobafireParser.java" changelist="276bc3d5-5c69-44d6-81b7-163289be2a71" time="1368451575751" ignored="false" />
     <file path="/lolkingParser.java" changelist="276bc3d5-5c69-44d6-81b7-163289be2a71" time="1368555921483" ignored="false" />
     <file path="/Summoner.java" changelist="276bc3d5-5c69-44d6-81b7-163289be2a71" time="1368470093182" ignored="false" />
@@ -427,7 +426,7 @@
       <file leaf-file-name="lolcounterParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/WebsiteParser/lolcounterParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="84" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.61047465">
+            <state line="26" column="42" selection-start="693" selection-end="693" vertical-scroll-proportion="0.44788086">
               <folding />
             </state>
           </provider>
@@ -838,7 +837,11 @@
       <created>1368560626081</created>
       <updated>1368560626081</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changelist (so far):&#10;+ Summoner - General Tab (almost) fully functional&#10;o 1 Champ - Counter Pick fully functional&#10;  &quot;Good Against&quot; and &quot;Good With&quot; coming soon&#10;- Team - Counter Pick not started (not enough information)">
+      <created>1368631839940</created>
+      <updated>1368631839940</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -885,7 +888,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.72302556" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67001116" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2914349" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2914349" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21357064" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -898,7 +901,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.72302556" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1398079" sideWeight="0.70856506" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1398079" sideWeight="0.6718576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21579532" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.72240806" order="9" side_tool="true" content_ui="tabs" />
@@ -1080,7 +1083,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WebsiteParser/lolcounterParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="84" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.61047465">
+        <state line="26" column="42" selection-start="693" selection-end="693" vertical-scroll-proportion="0.44788086">
           <folding />
         </state>
       </provider>
